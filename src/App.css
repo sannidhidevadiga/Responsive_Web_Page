@@ -33,10 +33,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.logo img {
-  height: 40px;
+  flex-wrap: wrap;
 }
 
 .epNav {
@@ -98,6 +95,7 @@ a:hover {
 
 .commitment {
   flex: 2;
+  min-width: 300px;
 }
 
 
@@ -106,6 +104,7 @@ a:hover {
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
+  min-width: 280px;
 }
 
 
@@ -117,7 +116,7 @@ a:hover {
 
 .report-option {
   display: flex;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -131,7 +130,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .report-icon {
@@ -190,6 +189,7 @@ a:hover {
   margin-top: 1rem;
   text-align: left;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .footer-bottom p,
@@ -207,5 +207,166 @@ a:hover {
 .footer-links a:hover {
   color: #008000;
   text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .header-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .main-content {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 996px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .epNav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .commitment,
+  .report-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .report-option {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .report-icon-wrapper {
+    height: 35px;
+    width: 35px;
+  }
+
+  .report-icon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .report-option-content h3 {
+    font-size: 15px;
+  }
+
+  .report-option button {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom p,
+  .footer-links {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .epNav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .commitment,
+  .report-box {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  h1 {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .report-option {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .report-icon-wrapper {
+    height: 30px;
+    width: 30px;
+  }
+
+  .report-icon {
+    height: 14px;
+    width: 14px;
+  }
+
+  .report-option-content {
+    gap: 0.25rem;
+  }
+
+  .report-option button {
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+    left: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    margin: 0 4px;
+  }
 }
 
